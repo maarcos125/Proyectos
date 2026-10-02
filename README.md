@@ -42,10 +42,8 @@ numerada automáticamente. Después puedes descargar la imagen o copiar la captu
 
 ## Cómo usarlo en Windows
 
-**Opción A – Descargar el .exe ya compilado:** en la pestaña *Actions* del
-repositorio, abre la última ejecución de *Compilar .exe para Windows* y
-descarga el artefacto `AnotadorImagenes-windows` (contiene
-`AnotadorImagenes.exe`, no hace falta instalar nada).
+**Opción A – Descargar el .exe ya compilado:** [AnotadorImagenes.exe](https://github.com/maarcos125/Proyectos/releases/latest/download/AnotadorImagenes.exe)
+(también en la sección *Releases* del repositorio). No hace falta instalar nada.
 
 **Opción B – Crear el .exe tú mismo:**
 1. Instala [Python 3](https://www.python.org/downloads/) (marca *Add Python to PATH*).

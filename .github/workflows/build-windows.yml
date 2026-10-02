@@ -4,6 +4,9 @@ on:
   push:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: windows-latest
@@ -20,3 +23,14 @@ jobs:
         with:
           name: AnotadorImagenes-windows
           path: dist/AnotadorImagenes.exe
+      - name: Publicar en Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: anotador-v${{ github.run_number }}
+          name: Anotador de Imágenes (versión ${{ github.run_number }})
+          target_commitish: ${{ github.sha }}
+          make_latest: true
+          body: |
+            Descarga **AnotadorImagenes.exe** y ábrelo con doble clic (no necesita instalación).
+            Si Windows muestra "Windows protegió su PC", pulsa *Más información* → *Ejecutar de todas formas*.
+          files: dist/AnotadorImagenes.exe
